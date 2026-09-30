@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flyvio flight search and travel deals.">
+  <title>Flyvio | Find Your Next Flight</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="Flyvio home">
+        <img src="images/logo.png" alt="" width="44" height="44">
+        <span>Flyvio</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="#search">Flight Tickets</a>
+        <a href="#">Hotels</a>
+        <a href="#">Bus Tickets</a>
+        <a href="#">Car Rental</a>
+        <a href="#">Transfers</a>
+        <a href="#campaigns">Campaigns</a>
+        <a href="#help">Help</a>
+      </nav>
+
+      <div class="account-actions">
+        <a class="button button-ghost" href="#">Log In</a>
+        <a class="button button-primary" href="#">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="search-hero" id="search" aria-labelledby="search-title">
+      <div class="hero-overlay"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Travel starts here</p>
+        <h1 id="search-title">Where will you fly next?</h1>
+        <p>Compare popular routes and shape your next journey in minutes.</p>
+      </div>
+
+      <form class="flight-search" action="#popular-flights" method="get">
+        <div class="search-options">
+          <fieldset class="trip-types">
+            <legend class="sr-only">Flight type</legend>
+            <label><input type="radio" name="trip-type" value="one-way"> One Way</label>
+            <label><input type="radio" name="trip-type" value="round-trip" checked> Round Trip</label>
+            <label><input type="radio" name="trip-type" value="multi-city"> Multi-City</label>
+          </fieldset>
+          <label class="direct-flight"><input type="checkbox" name="direct"> Non-stop flights only</label>
+        </div>
+
+        <div class="search-grid">
+          <label class="field field-wide">
+            <span>From</span>
+            <input type="text" name="from" value="Istanbul (IST)" aria-label="Departure airport">
+          </label>
+          <label class="field field-wide">
+            <span>To</span>
+            <input type="text" name="to" value="Antalya (AYT)" aria-label="Arrival airport">
+          </label>
+          <label class="field">
+            <span>Departure</span>
+            <input type="date" name="departure" value="2026-10-15">
+          </label>
+          <label class="field">
+            <span>Return</span>
+            <input type="date" name="return" value="2026-10-22">
+          </label>
+          <label class="field">
+            <span>Passengers</span>
+            <select name="passengers">
+              <option>1 Passenger</option>
+              <option>2 Passengers</option>
+              <option>3 Passengers</option>
+              <option>4 Passengers</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Cabin Class</span>
+            <select name="cabin">
+              <option>Economy</option>
+              <option>Premium Economy</option>
+              <option>Business</option>
+            </select>
+          </label>
+          <button class="search-button" type="submit">Search Flights <span aria-hidden="true">&#8594;</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section routes-section" id="popular-flights" aria-labelledby="routes-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Trending now</p>
+          <h2 id="routes-title">Popular Flights</h2>
+        </div>
+        <a class="text-link" href="#">View all routes <span aria-hidden="true">&#8594;</span></a>
+      </div>
+
+      <div class="route-grid">
+        <article class="route-card">
+          <div class="route-top"><span>IST</span><span class="route-line">1h 20m</span><span>AYT</span></div>
+          <div class="route-cities"><strong>Istanbul</strong><strong>Antalya</strong></div>
+          <div class="route-bottom"><p>From <strong>&euro;45</strong></p><a href="#search">View Flight</a></div>
+        </article>
+        <article class="route-card">
+          <div class="route-top"><span>IST</span><span class="route-line">1h 10m</span><span>ADB</span></div>
+          <div class="route-cities"><strong>Istanbul</strong><strong>Izmir</strong></div>
+          <div class="route-bottom"><p>From <strong>&euro;40</strong></p><a href="#search">View Flight</a></div>
+        </article>
+        <article class="route-card">
+          <div class="route-top"><span>ESB</span><span class="route-line">1h 05m</span><span>IST</span></div>
+          <div class="route-cities"><strong>Ankara</strong><strong>Istanbul</strong></div>
+          <div class="route-bottom"><p>From <strong>&euro;38</strong></p><a href="#search">View Flight</a></div>
+        </article>
+        <article class="route-card">
+          <div class="route-top"><span>ADB</span><span class="route-line">1h 15m</span><span>AYT</span></div>
+          <div class="route-cities"><strong>Izmir</strong><strong>Antalya</strong></div>
+          <div class="route-bottom"><p>From <strong>&euro;42</strong></p><a href="#search">View Flight</a></div>
+        </article>
+        <article class="route-card">
+          <div class="route-top"><span>IST</span><span class="route-line">1h 45m</span><span>TZX</span></div>
+          <div class="route-cities"><strong>Istanbul</strong><strong>Trabzon</strong></div>
+          <div class="route-bottom"><p>From <strong>&euro;50</strong></p><a href="#search">View Flight</a></div>
+        </article>
+        <article class="route-card">
+          <div class="route-top"><span>AYT</span><span class="route-line">1h 10m</span><span>ESB</span></div>
+          <div class="route-cities"><strong>Antalya</strong><strong>Ankara</strong></div>
+          <div class="route-bottom"><p>From <strong>&euro;39</strong></p><a href="#search">View Flight</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section campaigns-section" id="campaigns" aria-labelledby="campaigns-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Go further for less</p>
+          <h2 id="campaigns-title">Special Offers &amp; Campaigns</h2>
+        </div>
+      </div>
+
+      <div class="campaign-grid">
+        <article class="campaign-card">
+          <img src="images/campaign1.jpg" alt="Aircraft flying above Istanbul at sunrise">
+          <div class="campaign-content">
+            <span class="tag">New member</span>
+            <h3>First Flight Discount</h3>
+            <p>Take 20% off your first domestic booking and start exploring.</p>
+            <a class="button button-dark" href="#search">Explore Deal</a>
+          </div>
+        </article>
+        <article class="campaign-card">
+          <img src="images/campaign2.jpg" alt="Aircraft flying over a Mediterranean coastline">
+          <div class="campaign-content">
+            <span class="tag tag-blue">Limited time</span>
+            <h3>International Flight Deals</h3>
+            <p>Discover selected European routes with fares starting from &euro;79.</p>
+            <a class="button button-dark" href="#search">See Destinations</a>
+          </div>
+        </article>
+        <article class="campaign-card">
+          <img src="images/campaign3.jpg" alt="Students walking through a modern airport terminal">
+          <div class="campaign-content">
+            <span class="tag tag-green">For students</span>
+            <h3>Student Offers</h3>
+            <p>Enjoy flexible tickets and extra baggage on eligible journeys.</p>
+            <a class="button button-dark" href="#search">View Benefits</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="benefits-section" aria-labelledby="benefits-title">
+      <div class="section benefits-inner">
+        <div class="benefits-copy">
+          <p class="eyebrow">Designed for easy travel</p>
+          <h2 id="benefits-title">Why Choose Us?</h2>
+          <p>Simple choices, transparent prices and support when you need it.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit-item">
+            <span class="benefit-number">01</span>
+            <div><h3>Affordable Prices</h3><p>Compare routes and find clear fares without hidden surprises.</p></div>
+          </article>
+          <article class="benefit-item">
+            <span class="benefit-number">02</span>
+            <div><h3>Secure Booking</h3><p>Your personal information stays protected throughout the journey.</p></div>
+          </article>
+          <article class="benefit-item">
+            <span class="benefit-number">03</span>
+            <div><h3>Fast and Easy</h3><p>Move from search to the right flight with a clear, focused experience.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="help">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="#top">
+          <img src="images/logo.png" alt="" width="44" height="44">
+          <span>Flyvio</span>
+        </a>
+        <p>Easy routes, clear prices and more reasons to go.</p>
+      </div>
+      <div>
+        <h2>Flight Tickets</h2>
+        <a href="#popular-flights">Domestic Flights</a>
+        <a href="#popular-flights">International Flights</a>
+        <a href="#popular-flights">Popular Routes</a>
+      </div>
+      <div>
+        <h2>Help</h2>
+        <a href="#">FAQ</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Cancellation &amp; Refund</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+      </div>
+      <div>
+        <h2>Follow Us</h2>
+        <a href="#">Instagram</a>
+        <a href="#">X</a>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Flyvio &ndash; All Rights Reserved.</p>
+      <div><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </footer>
+</body>
+</html>
